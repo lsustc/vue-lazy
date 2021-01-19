@@ -11,11 +11,12 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.ts'
+    app: './src/main.ts',
+    // vendor: ['vue']
   },
   output: {
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    filename: '[name].chunk.js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
